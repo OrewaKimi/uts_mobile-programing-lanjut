@@ -50,7 +50,6 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-              
                       //Notification
                       Container(
                         decoration: BoxDecoration(
@@ -147,9 +146,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-              SizedBox(
-                height: 25,
-              ),
+            SizedBox(
+              height: 25,
+            ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(25),
@@ -157,61 +156,80 @@ class _HomePageState extends State<HomePage> {
                 child: Center(
                   child: Column(
                     children: [
-
                       //exercises heading
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                         Text(
-                          'Exercises',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
+                          Text(
+                            'Exercises',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
                             ),
                           ),
-                         Icon(Icons.more_horiz),
+                          Icon(Icons.more_horiz),
                         ],
                       ),
                       SizedBox(
                         height: 20,
-                        ),
-
+                      ),
                       //Listiew of exercises
-                       Container(
+                      Container(
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16),
                         ),
-                        child: Row(children: [
-                          Icon(Icons.favorite),
-                          SizedBox(
-                            width: 12,
-                            ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                        //title
-                          Text('Speaking Skiils',
-                            style: TextStyle(fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                              ),
-                        //subtitle
-                          Text('16 Exercises',
-                          style: TextStyle(fontWeight: FontWeight.bold,
-                          color: Colors.grey,
-                            fontSize: 14,
-                            ),
-                            ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Container(
+                                    padding: EdgeInsets.all(16),
+                                    color: Colors.orange,
+                                    child: Icon(
+                                      Icons.favorite,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    //title
+                                    Text(
+                                      'Speaking Skills',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    //subtitle
+                                    Text(
+                                      '16 Exercises',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ],
-                            )
+                            ),
+                            Icon(Icons.more_horiz),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
