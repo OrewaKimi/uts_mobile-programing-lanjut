@@ -152,8 +152,32 @@ class _HomePageState extends State<HomePage> {
               ),
             Expanded(
               child: Container(
-                color: Colors.white,
+                padding: EdgeInsets.all(25),
+                color: Colors.grey[100],
+                child: Center(
+                  child: Column(
+                    children: [
+
+                      //exercises heading
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                         Text(
+                          'Exercises',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            ),
+                          ),
+                         Icon(Icons.more_horiz),
+                        ],
+                      ),
+
+                      //Listiew of exercises
+                    ],
+                  ),
                 ),
+              ),
             ),
           ],
         ),
