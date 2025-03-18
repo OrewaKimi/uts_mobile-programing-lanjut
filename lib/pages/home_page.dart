@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(25),
-                color: Colors.grey[100],
+                color: Colors.grey[200],
                 child: Center(
                   child: Column(
                     children: [
@@ -172,8 +172,46 @@ class _HomePageState extends State<HomePage> {
                          Icon(Icons.more_horiz),
                         ],
                       ),
+                      SizedBox(
+                        height: 20,
+                        ),
 
                       //Listiew of exercises
+                       Container(
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Row(children: [
+                          Icon(Icons.favorite),
+                          SizedBox(
+                            width: 12,
+                            ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                        //title
+                          Text('Speaking Skiils',
+                            style: TextStyle(fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                              ),
+                        //subtitle
+                          Text('16 Exercises',
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                          color: Colors.grey,
+                            fontSize: 14,
+                            ),
+                            ),
+                              ],
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
