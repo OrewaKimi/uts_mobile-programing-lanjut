@@ -23,47 +23,50 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            Column(
-              children: [
-                // greetings row
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    //Hi Kimi
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          'Hi, Kimi!',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Column(
+                children: [
+                  // greetings row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //Hi Kimi
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Hi, Kimi!',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '17 March, 2025',
-                          style: TextStyle(color: Colors.blue[200]),
-                        ),
-                      ],
-                    ),
-
-                    //Notification
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.blue[600],
-                        borderRadius: BorderRadius.circular(12),
+                          const SizedBox(height: 8),
+                          Text(
+                            '17 March, 2025',
+                            style: TextStyle(color: Colors.blue[200]),
+                          ),
+                        ],
                       ),
-                      padding: const EdgeInsets.all(12),
-                      child: const Icon(
-                        Icons.notifications,
-                        color: Colors.white,
+              
+                      //Notification
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue[600],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        padding: const EdgeInsets.all(12),
+                        child: const Icon(
+                          Icons.notifications,
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 25),
 
@@ -144,8 +147,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-
-            Expanded(child: Container(color: Colors.white)),
+              SizedBox(
+                height: 25,
+              ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+            child: Container(
+              height: 100,
+              color: Colors.white,
+              ),
+            ),
           ],
         ),
       ),
