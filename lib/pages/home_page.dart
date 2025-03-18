@@ -150,12 +150,10 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 25,
               ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-            child: Container(
-              height: 100,
-              color: Colors.white,
-              ),
+            Expanded(
+              child: Container(
+                color: Colors.white,
+                ),
             ),
           ],
         ),
