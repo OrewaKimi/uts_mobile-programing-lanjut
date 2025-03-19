@@ -147,9 +147,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 25,
-            ),
+            SizedBox(height: 25),
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(25),
@@ -171,9 +169,7 @@ class _HomePageState extends State<HomePage> {
                           Icon(Icons.more_horiz),
                         ],
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      SizedBox(height: 20),
 
                       //Listiew of exercises
                       Expanded(
@@ -182,20 +178,32 @@ class _HomePageState extends State<HomePage> {
                             ExerciseTitle(
                               icon: Icons.favorite,
                               exerciseName: 'Speaking Skills',
-                              numberOfExercises: 16,
+                              numberOfExercises: 12,
                               color: Colors.orange,
                             ),
                             ExerciseTitle(
-                              icon: Icons.person,
+                              icon: Icons.book,
                               exerciseName: 'Reading Skiils',
                               numberOfExercises: 8,
-                              color: Colors.green,  
+                              color: Colors.green,
                             ),
                             ExerciseTitle(
-                              icon: Icons.star,
+                              icon: Icons.create,
                               exerciseName: 'Writing Skills',
-                              numberOfExercises: 16,
-                              color: Colors.pink,
+                              numberOfExercises: 6,
+                              color: Colors.black,
+                            ),
+                            ExerciseTitle(
+                              icon: Icons.headphones,
+                              exerciseName: 'Listening Skills',
+                              numberOfExercises: 4,
+                              color: Colors.red,
+                            ),
+                             ExerciseTitle(
+                              icon: Icons.lightbulb,
+                              exerciseName: 'Critical Thinking',
+                              numberOfExercises: 5,
+                              color: Colors.purple,
                             ),
                           ],
                         ),
