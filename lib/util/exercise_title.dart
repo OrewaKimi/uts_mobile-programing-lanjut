@@ -4,12 +4,14 @@ class ExerciseTitle extends StatefulWidget {
   final IconData icon;
   final String exerciseName;
   final int numberOfExercises;
+  final Color color; // Fix: add type to color property
 
   const ExerciseTitle({
     Key? key,
     required this.icon,
     required this.exerciseName,
     required this.numberOfExercises,
+    required this.color,
   }) : super(key: key);
 
   @override
@@ -36,10 +38,11 @@ class _ExerciseTitleState extends State<ExerciseTitle> {
                   borderRadius: BorderRadius.circular(12),
                   child: Container(
                     padding: EdgeInsets.all(16),
-                    color: Colors.orange,
+                    color: widget.color, // Fix: use widget.color instead of color
                     child: Icon(
-                      widget.icon, // Fix: use widget.icon instead of icon
-                      color: Colors.white),
+                      widget.icon,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 SizedBox(width: 12),
@@ -48,7 +51,7 @@ class _ExerciseTitleState extends State<ExerciseTitle> {
                   children: [
                     //title
                     Text(
-                      widget.exerciseName, // Fix: use widget.exerciseName instead of exerciseName
+                      widget.exerciseName,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
@@ -57,7 +60,8 @@ class _ExerciseTitleState extends State<ExerciseTitle> {
                     SizedBox(height: 5),
                     //subtitle
                     Text(
-                      widget.numberOfExercises.toString() + ' Exercises', // Fix: use widget.numberOfExercises instead of numberOfExercises
+                      widget.numberOfExercises.toString() +
+                          ' Exercises',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey,
