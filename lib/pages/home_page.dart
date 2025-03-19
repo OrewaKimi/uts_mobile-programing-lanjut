@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.message), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
@@ -183,16 +183,19 @@ class _HomePageState extends State<HomePage> {
                               icon: Icons.favorite,
                               exerciseName: 'Speaking Skills',
                               numberOfExercises: 16,
+                              color: Colors.orange,
                             ),
                             ExerciseTitle(
                               icon: Icons.person,
                               exerciseName: 'Reading Skiils',
                               numberOfExercises: 8,
+                              color: Colors.green,  
                             ),
                             ExerciseTitle(
                               icon: Icons.star,
                               exerciseName: 'Writing Skills',
                               numberOfExercises: 16,
+                              color: Colors.pink,
                             ),
                           ],
                         ),
