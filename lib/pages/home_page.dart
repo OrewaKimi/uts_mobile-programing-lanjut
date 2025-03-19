@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mentalhealthapp/util/emoticon_face.dart';
+import 'package:mentalhealthapp/util/exercise_title.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -173,60 +174,26 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(
                         height: 20,
                       ),
+
                       //Listiew of exercises
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Expanded(
+                        child: ListView(
                           children: [
-                            Row(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(12),
-                                  child: Container(
-                                    padding: EdgeInsets.all(16),
-                                    color: Colors.orange,
-                                    child: Icon(
-                                      Icons.favorite,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 12,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    //title
-                                    Text(
-                                      'Speaking Skills',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    //subtitle
-                                    Text(
-                                      '16 Exercises',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey,
-                                        fontSize: 14,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            ExerciseTitle(
+                              icon: Icons.favorite,
+                              exerciseName: 'Speaking Skills',
+                              numberOfExercises: 16,
                             ),
-                            Icon(Icons.more_horiz),
+                            ExerciseTitle(
+                              icon: Icons.person,
+                              exerciseName: 'Reading Skiils',
+                              numberOfExercises: 8,
+                            ),
+                            ExerciseTitle(
+                              icon: Icons.star,
+                              exerciseName: 'Writing Skills',
+                              numberOfExercises: 16,
+                            ),
                           ],
                         ),
                       ),
