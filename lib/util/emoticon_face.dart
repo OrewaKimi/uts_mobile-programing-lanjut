@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class EmoticonFace extends StatelessWidget {
   final String emotionface;
-  
+
   const EmoticonFace({
     Key? key,
     required this.emotionface,
-    }) : super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,11 @@ class EmoticonFace extends StatelessWidget {
         color: Colors.blue[600],
         borderRadius: BorderRadius.circular(12),
       ),
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       child: Center(
         child: Text(
           emotionface,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 28,
           ),
         ),
