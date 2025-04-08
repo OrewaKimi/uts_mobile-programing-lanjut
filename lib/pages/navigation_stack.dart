@@ -12,7 +12,6 @@ class NavigationStack extends StatefulWidget {
 
 class _NavigationStackState extends State<NavigationStack> {
   int _selectedIndex = 0;
-  final TextEditingController _controller = TextEditingController();
 
   static final List<Widget> _pages = [
     const HomePage(),
@@ -24,34 +23,6 @@ class _NavigationStackState extends State<NavigationStack> {
     setState(() {
       _selectedIndex = index;
     });
-
-    // Tampilkan input dialog
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('Input Navigation ${index + 1}'),
-        content: TextField(
-          controller: _controller,
-          decoration: InputDecoration(hintText: 'Masukkan sesuatu...'),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Batal'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Input: ${_controller.text}')),
-              );
-              _controller.clear();
-            },
-            child: const Text('Submit'),
-          ),
-        ],
-      ),
-    );
   }
 
   @override
