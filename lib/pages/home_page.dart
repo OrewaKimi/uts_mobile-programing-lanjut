@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[800],
+      backgroundColor: Colors.teal[700],
       body: SafeArea(
         child: Column(
           children: [
@@ -26,17 +26,17 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(height: 8),
-                          Text('17 March, 2025', style: TextStyle(color: Colors.blue[200])),
+                          Text('8 April, 2025', style: TextStyle(color: Colors.teal[100])),
                         ],
                       ),
                       Container(
-                        decoration: BoxDecoration(
-                          color: Colors.blue[600],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        padding: const EdgeInsets.all(12),
-                        child: const Icon(Icons.notifications, color: Colors.white),
+                      decoration: BoxDecoration(
+                        color: Colors.teal[500],
+                        borderRadius: BorderRadius.circular(12),
                       ),
+                      padding: const EdgeInsets.all(12),
+                      child: const Icon(Icons.notifications, color: Colors.white),
+                    ),
                     ],
                   ),
                 ],
@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 25),
             Container(
               decoration: BoxDecoration(
-                color: Colors.blue[600],
+                color: Colors.teal[500],
                 borderRadius: BorderRadius.circular(12),
               ),
               padding: const EdgeInsets.all(12),
@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 25),
+                      const SizedBox(height: 25),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Row(
