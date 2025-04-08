@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mentalhealthapp/pages/home_page.dart';
-import 'package:mentalhealthapp/pages/messages_page.dart';
-import 'package:mentalhealthapp/pages/profile_page.dart';
+import 'package:mentalhealthapp/pages/navigation_stack.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,14 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => const HomePage(),
-        '/messages': (context) => const MessagesPage(),
-        '/profile': (context) => const ProfilePage(),
-      },
-      initialRoute: '/',
+      home: NavigationStack(),
     );
   }
 }
