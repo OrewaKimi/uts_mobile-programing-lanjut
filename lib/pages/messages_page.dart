@@ -7,7 +7,7 @@ class MessagesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Messages')),
-      // Di messages_page.dart
+      
 body: Center(
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
